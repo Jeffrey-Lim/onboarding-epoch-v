@@ -38,5 +38,8 @@ class ChatBot:
     # TODO(Jeffrey): Add option "Give the answer to life, the universe, and everything"
 
     def get_conversation_options(self) -> list[tuple[str, Callable[[], str]]]:
-        """TODO(Jeffrey): Document this method."""
+        """Get conversation options.
+
+        :return: A list of tuples containing the conversation options.
+        """
         return [("Say hello", self.say_hi), ("Tell the time", self.tell_time)]
