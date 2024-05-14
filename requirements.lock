@@ -10,7 +10,7 @@
 -e file:.
 colorama==0.4.6
     # via tqdm
-fire==0.6.0a
+fire==0.6.0
     # via randomname
 randomname==0.2.1
     # via onboarding-epoch-v
