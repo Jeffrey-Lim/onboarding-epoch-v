@@ -1,5 +1,6 @@
 """A super simple ChatBot."""
 
+import datetime
 from collections.abc import Callable
 from dataclasses import dataclass
 
@@ -25,6 +26,12 @@ class ChatBot:
     # TODO(Jeffrey): Add option "Leave a souvenir"
 
     # TODO(Jeffrey): Add option "Tell the time"
+    def tell_time(self) -> str:
+        """Say hi, followed by the time.
+
+        :return: The greeting sentence.
+        """
+        return f"Hi! The time currently is {datetime.datetime.now().astimezone()}"
 
     # TODO(Jeffrey): Add option "Give me a random name"
 
@@ -35,6 +42,4 @@ class ChatBot:
 
         :return: A list of tuples containing the conversation options.
         """
-        return [
-            ("Say hello", self.say_hi),
-        ]
+        return [("Say hello", self.say_hi), ("Tell the time", self.tell_time)]
