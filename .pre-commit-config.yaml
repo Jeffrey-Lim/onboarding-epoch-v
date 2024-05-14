@@ -1,4 +1,4 @@
-exclude: ^(venv/|.venv/|notebooks/|scripts/|test/|tests/)
+exclude: ^(venv/|.venv/|tests/)
 ci:
   skip:
     - mypy  # TODO(Jeffrey): Fix MyPy on CI

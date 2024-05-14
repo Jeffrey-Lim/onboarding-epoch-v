@@ -7,7 +7,7 @@ A practice repository for the new engineers of Team Epoch V.
 [![Rye](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/rye/main/artwork/badge.json)](https://rye-up.com)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Jeffrey-Lim/onboarding-epoch-v/main.svg)](https://results.pre-commit.ci/latest/Jeffrey-Lim/onboarding-epoch-v/main)
-[![codecov](https://codecov.io/gh/Jeffrey-Lim/onboarding-epoch-v/graph/badge.svg)](https://codecov.io/gh/Jeffrey-Lim/onboarding-epoch-v)
+[![codecov](https://codecov.io/gh/Jeffrey-Lim/onboarding-epoch-v/graph/badge.svg?token=uZo7ykrgXY)](https://codecov.io/gh/Jeffrey-Lim/onboarding-epoch-v)
 
 ## Getting started
 
