@@ -42,4 +42,8 @@ class ChatBot:
 
         :return: A list of tuples containing the conversation options.
         """
-        return [("Say hello", self.say_hi), ("Tell the time", self.tell_time)]
+        return [
+            ("Say hello", self.say_hi),
+            ("Tell the time", self.tell_time),
+            ("Give the answer to life, the universe, and everything", lambda: "42"),
+        ]
