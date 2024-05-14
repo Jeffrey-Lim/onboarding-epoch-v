@@ -22,7 +22,18 @@ class ChatBot:
         """
         return f"Hi! This is {self.name}."
 
-    # TODO(Jeffrey): Add option "Leave a souvenir"
+    #
+    def souvenir(self) -> str:
+        """Write a file.
+
+        :return: confirming success.
+        """
+        filename = "souvenir.txt"
+        text = "AImigo was here."
+
+        with open(filename, "w") as file:
+            file.write(text)
+        return "success"
 
     # TODO(Jeffrey): Add option "Tell the time"
 
@@ -37,4 +48,5 @@ class ChatBot:
         """
         return [
             ("Say hello", self.say_hi),
+            ("Leave a souvenir", self.souvenir),
         ]
