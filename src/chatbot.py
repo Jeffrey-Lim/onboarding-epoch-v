@@ -34,4 +34,5 @@ class ChatBot:
         """TODO(Jeffrey): Document this method."""
         return [
             ("Say hello", self.say_hi),
+            ("Give the answer to life, the universe, and everything", lambda: "42"),
         ]
