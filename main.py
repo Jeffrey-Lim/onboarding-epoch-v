@@ -9,15 +9,14 @@ from src.chatbot import ChatBot
 
 def run_aimigo() -> None:
     """Run AIMigo."""
-    aimigo: ChatBot = ChatBot(name="AIMigo")
-
     print("Loading AIMigo...")
     for _ in tqdm(range(100)):
         time.sleep(0.01)
     print("Done!")
 
     # Ask for the user's name and store it
-    input("What is your name? ")  # TODO(Jeffrey): Store the user's name in the ChatBot
+    username = input("What is your name? ")  # TODO(Jeffrey): Store the user's name in the ChatBot
+    aimigo: ChatBot = ChatBot(name="AIMigo", username=username)
     print(f"Hello, {aimigo.username}! I am {aimigo.name}, your Artificially Intelligent friend.")
 
     # Indefinitely ask for the user's input
