@@ -23,7 +23,7 @@ jobs:
           CODECOV_STATIC_TOKEN: ${{ secrets.CODECOV_STATIC_TOKEN }}
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Run tests
-        run: cat codecov_ats/tests_to_run.txt | rye run pytest --cov=./ --cov-branch --cov-report=json
+        run: cat codecov_ats/tests_to_run.txt | rye run pytest --cov=./ --cov-branch --cov-report=xml
       - name: Upload coverage
         uses: codecov/codecov-action@v4.4.0
         env:

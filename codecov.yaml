@@ -1,7 +1,7 @@
 cli:
   plugins:
     pycoverage:
-      report_type: "json"
+      report_type: "xml"
 codecov:
   require_ci_to_pass: true
 coverage:
