@@ -1,7 +1,4 @@
 exclude: ^(venv/|.venv/|tests/)
-ci:
-  skip:
-    - mypy  # TODO(Jeffrey): Fix MyPy on CI
 repos:
   - repo: local  # Remove this when a new version of pre-commit-hooks (>4.6.0) is released
     hooks:
@@ -60,7 +57,7 @@ repos:
       - id: sphinx-lint
         args: [ --enable=default-role ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.3
+    rev: v0.4.4
     hooks:
       - id: ruff-format
       - id: ruff
@@ -75,6 +72,5 @@ repos:
     hooks:
       - id: mypy
         additional_dependencies:
-          - tqdm
+          - types-tqdm
           - randomname
-        args: [ --disallow-any-generics, --disallow-untyped-defs, --disable-error-code=import-untyped ]
