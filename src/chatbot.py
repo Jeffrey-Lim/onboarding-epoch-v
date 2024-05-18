@@ -24,7 +24,8 @@ class ChatBot:
         return f"Hi! This is {self.name}."
 
     #
-    def souvenir(self) -> str:
+    @staticmethod
+    def souvenir() -> str:
         """Write a file.
 
         :return: confirming success.
