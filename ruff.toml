@@ -36,9 +36,6 @@ ignore = [
     # flake8-fixme (FIX)
     "FIX001", # Line contains FIXME
     "FIX002", # Line contains TODO
-    # pep8-naming (N)
-    "N803", # Argument name should be lowercase. Variable name "X" is very common in machine learning.
-    "N806", # Variable in function should be lowercase. Variable name "X" is very common in machine learning.
     # flake8-bandit (S)
     "S311", # Standard pseudo-random generators are not suitable for cryptographic purposes
     # flake8-use-pathlib (PTH)
@@ -72,8 +69,11 @@ external = [
     "PLR2004", # Magic values in comparison allowed in tests
 ]
 
-[lint.flake8-import-conventions]
-banned-from = ["torch"]
+[lint.flake8-annotations]
+allow-star-arg-any = true
+
+[lint.flake8-unused-arguments]
+ignore-variadic-names = true
 
 [lint.flake8-import-conventions.extend-aliases]
 "dask.array" = "da"
@@ -85,7 +85,7 @@ banned-from = ["torch"]
 known-third-party = ["wandb"]
 
 [lint.pep8-naming]
-extend-ignore-names = ["X", "XData", "XTrain", "XTest", "XValid", "y", "yData", "yTrain", "yTest", "yValid"]
+extend-ignore-names = ["X*"]
 
 [lint.pydocstyle]
 convention = "pep257"
