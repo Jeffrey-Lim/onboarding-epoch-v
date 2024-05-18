@@ -32,7 +32,7 @@ repos:
         args: [ --pytest-test-first ]
       - id: trailing-whitespace
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.16
+    rev: v0.17
     hooks:
       - id: validate-pyproject
   - repo: https://github.com/pre-commit/pygrep-hooks
@@ -72,5 +72,5 @@ repos:
     hooks:
       - id: mypy
         additional_dependencies:
-          - types-tqdm
-          - randomname
+          - types-tqdm>=4.66.0.20240417
+          - randomname>=0.2.1
