@@ -1,9 +1,14 @@
+cli:
+  plugins:
+    pycoverage:
+      report_type: "json"
+codecov:
+  require_ci_to_pass: true
 coverage:
   status:
     project:
       default:
         target: 0%
-
 flag_management:
   individual_flags:
     - name: smart-tests
@@ -12,8 +17,3 @@ flag_management:
       statuses:
         - type: "project"
         - type: "patch"
-
-cli:
-  plugins:
-    pycoverage:
-      report_type: "json"
