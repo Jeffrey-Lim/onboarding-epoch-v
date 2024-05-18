@@ -10,6 +10,9 @@
 -e file:.
 cfgv==3.4.0
     # via pre-commit
+colorama==0.4.6
+    # via pytest
+    # via tqdm
 coverage==7.5.1
     # via pytest-cov
 distlib==0.3.8

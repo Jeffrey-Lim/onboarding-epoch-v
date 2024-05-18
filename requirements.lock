@@ -8,5 +8,7 @@
 #   with-sources: false
 
 -e file:.
+colorama==0.4.6
+    # via tqdm
 tqdm==4.66.4
     # via onboarding-epoch-v
