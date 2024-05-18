@@ -1,4 +1,5 @@
 """Test the ChatBot functionalities."""
+
 from src.chatbot import ChatBot
 
 
