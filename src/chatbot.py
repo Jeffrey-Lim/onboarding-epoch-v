@@ -23,7 +23,6 @@ class ChatBot:
         """
         return f"Hi! This is {self.name}."
 
-    #
     @staticmethod
     def souvenir() -> str:
         """Write a file.
@@ -37,7 +36,8 @@ class ChatBot:
             file.write(text)
         return "Success!"
 
-    def tell_time(self) -> str:
+    @staticmethod
+    def tell_time() -> str:
         """Say hi, followed by the time.
 
         :return: The greeting sentence.

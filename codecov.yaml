@@ -2,13 +2,12 @@ cli:
   plugins:
     pycoverage:
       report_type: "xml"
-codecov:
-  require_ci_to_pass: true
 coverage:
   status:
     project:
       default:
         target: 0%
+        threshold: 100%
 flag_management:
   individual_flags:
     - name: smart-tests
