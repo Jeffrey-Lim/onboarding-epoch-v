@@ -10,5 +10,13 @@
 -e file:.
 colorama==0.4.6
     # via tqdm
+fire==0.6.0
+    # via randomname
+randomname==0.2.1
+    # via onboarding-epoch-v
+six==1.16.0
+    # via fire
+termcolor==2.4.0
+    # via fire
 tqdm==4.66.4
     # via onboarding-epoch-v

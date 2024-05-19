@@ -4,6 +4,8 @@ import datetime
 from collections.abc import Callable
 from dataclasses import dataclass
 
+import randomname
+
 
 @dataclass(slots=True)
 class ChatBot:
@@ -44,7 +46,13 @@ class ChatBot:
         """
         return f"Hi! The time currently is {datetime.datetime.now().astimezone()}"
 
-    # TODO(Jeffrey): Add option "Give me a random name"
+    @staticmethod
+    def get_random_name() -> str:
+        """Run randomname method get name.
+
+        :return: random name string
+        """
+        return randomname.get_name()
 
     def get_conversation_options(self) -> list[tuple[str, Callable[[], str]]]:
         """Get conversation options.
@@ -54,6 +62,7 @@ class ChatBot:
         return [
             ("Say hello", self.say_hi),
             ("Tell the time", self.tell_time),
+            ("Give me a random name", self.get_random_name),
             ("Leave a souvenir", self.souvenir),
             ("Give the answer to life, the universe, and everything", lambda: "42"),
         ]
