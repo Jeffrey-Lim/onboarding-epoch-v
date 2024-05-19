@@ -23,10 +23,21 @@ class ChatBot:
         """
         return f"Hi! This is {self.name}."
 
-    # TODO(Jeffrey): Add option "Leave a souvenir"
+    @staticmethod
+    def souvenir() -> str:
+        """Write a file.
 
-    # TODO(Jeffrey): Add option "Tell the time"
-    def tell_time(self) -> str:
+        :return: confirming success.
+        """
+        filename = "souvenir.txt"
+        text = "AImigo was here."
+
+        with open(filename, "w") as file:
+            file.write(text)
+        return "Success!"
+
+    @staticmethod
+    def tell_time() -> str:
         """Say hi, followed by the time.
 
         :return: The greeting sentence.
@@ -34,8 +45,6 @@ class ChatBot:
         return f"Hi! The time currently is {datetime.datetime.now().astimezone()}"
 
     # TODO(Jeffrey): Add option "Give me a random name"
-
-    # TODO(Jeffrey): Add option "Give the answer to life, the universe, and everything"
 
     def get_conversation_options(self) -> list[tuple[str, Callable[[], str]]]:
         """Get conversation options.
@@ -45,5 +54,6 @@ class ChatBot:
         return [
             ("Say hello", self.say_hi),
             ("Tell the time", self.tell_time),
+            ("Leave a souvenir", self.souvenir),
             ("Give the answer to life, the universe, and everything", lambda: "42"),
         ]

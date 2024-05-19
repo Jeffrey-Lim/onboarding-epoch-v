@@ -15,7 +15,7 @@ def run_aimigo() -> None:
     print("Done!")
 
     # Ask for the user's name and store it
-    username = input("What is your name? ")  # TODO(Jeffrey): Store the user's name in the ChatBot
+    username = input("What is your name? ")
     aimigo: ChatBot = ChatBot(name="AIMigo", username=username)
     print(f"Hello, {aimigo.username}! I am {aimigo.name}, your Artificially Intelligent friend.")
 
