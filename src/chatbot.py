@@ -25,14 +25,29 @@ class ChatBot:
         """
         return f"Hi! This is {self.name}."
 
-    def tell_time(self) -> str:
+    @staticmethod
+    def souvenir() -> str:
+        """Write a file.
+
+        :return: confirming success.
+        """
+        filename = "souvenir.txt"
+        text = "AImigo was here."
+
+        with open(filename, "w") as file:
+            file.write(text)
+        return "Success!"
+
+    @staticmethod
+    def tell_time() -> str:
         """Say hi, followed by the time.
 
         :return: The greeting sentence.
         """
         return f"Hi! The time currently is {datetime.datetime.now().astimezone()}"
 
-    def get_random_name(self) -> str:
+    @staticmethod
+    def get_random_name() -> str:
         """Run randomname method get name.
 
         :return: random name string
@@ -48,5 +63,6 @@ class ChatBot:
             ("Say hello", self.say_hi),
             ("Tell the time", self.tell_time),
             ("Give me a random name", self.get_random_name),
+            ("Leave a souvenir", self.souvenir),
             ("Give the answer to life, the universe, and everything", lambda: "42"),
         ]
