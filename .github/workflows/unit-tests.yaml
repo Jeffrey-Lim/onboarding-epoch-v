@@ -23,6 +23,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           level: warning
+          setup_method: 'adaptive'
           setup_command: 'rye add mypy'
           execute_command: 'rye run mypy'
   unit-tests:
