@@ -6,6 +6,25 @@ on:
     branches: [ main ]
 
 jobs:
+  mypy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4.1.6
+        with:
+          fetch-depth: 0
+      - name: Install the latest version of rye
+        uses: eifinger/setup-rye@v3.0.2
+      - name: Setup the environment
+        run: rye sync --all-features
+      - name: Run MyPy
+        uses: tsuyoshicho/action-mypy@v4.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          level: warning
+          setup_command: 'rye add mypy'
+          execute_command: 'rye run mypy'
   unit-tests:
     runs-on: ubuntu-latest
     steps:
