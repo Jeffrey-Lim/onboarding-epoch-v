@@ -72,10 +72,9 @@ repos:
     hooks:
       - id: mypy
         additional_dependencies:
-          - "--extra-index-url=https://download.pytorch.org/whl/cpu"
           - types-tqdm>=4.66.0.20240417
           - randomname>=0.2.1
-          - "torch==2.3.1+cpu"
+          - "https://download.pytorch.org/whl/cpu/torch-2.3.1%2Bcpu-cp310-cp310-linux_x86_64.whl#sha256=d679e21d871982b9234444331a26350902cfd2d5ca44ce6f49896af8b3a3087d"
         args:
           - "--fast-module-lookup"
           - "--disallow-any-generics"
