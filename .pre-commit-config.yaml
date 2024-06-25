@@ -74,7 +74,7 @@ repos:
         additional_dependencies:
           - types-tqdm>=4.66.0.20240417
           - randomname>=0.2.1
-          - "https://download.pytorch.org/whl/cpu/torch-2.3.1%2Bcpu-cp310-cp310-linux_x86_64.whl#sha256=d679e21d871982b9234444331a26350902cfd2d5ca44ce6f49896af8b3a3087d"
+          - "https://download.pytorch.org/whl/cpu/torch-2.3.1%2Bcpu-cp312-cp312-linux_x86_64.whl#sha256=2141a6cb7021adf2f92a0fd372cfeac524ba460bd39ce3a641d30a561e41f69a"
         args:
           - "--fast-module-lookup"
           - "--disallow-any-generics"
