@@ -71,9 +71,10 @@ repos:
     rev: v1.10.0
     hooks:
       - id: mypy
-        additional_dependencies:  # TODO(Jeffrey): Auto-update this list based on pyproject.toml or requirements-dev.lock
+        additional_dependencies:
           - types-tqdm>=4.66.0.20240417
           - randomname>=0.2.1
+          - torch==2.3.1
         args:
           - "--fast-module-lookup"
           - "--disallow-any-generics"
