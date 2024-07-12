@@ -44,7 +44,7 @@ repos:
       - id: python-no-log-warn
       - id: python-use-type-annotations
   - repo: https://github.com/jackdewinter/pymarkdown
-    rev: v0.9.20
+    rev: v0.9.21
     hooks:
       - id: pymarkdown
         args:
@@ -57,7 +57,7 @@ repos:
       - id: sphinx-lint
         args: [ "--enable=default-role" ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.10
+    rev: v0.5.1
     hooks:
       - id: ruff-format
       - id: ruff
@@ -68,7 +68,7 @@ repos:
   #      - id: pydoclint
   #        args: [ "--quiet" ]
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.10.0
+    rev: v1.10.1
     hooks:
       - id: mypy
         additional_dependencies:  # TODO(Jeffrey): Auto-update this list based on pyproject.toml or requirements-dev.lock
