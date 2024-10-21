@@ -8,7 +8,7 @@ repos:
         language: fail
         files: '(?i)((^|/)(CON|PRN|AUX|NUL|COM[\d¹²³]|LPT[\d¹²³])(\.|/|$)|[<>:\"\\|?*\x00-\x1F]|/[^/]*[\.\s]/|[^/]*[\.\s]$)'
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: check-added-large-files
       - id: check-builtin-literals
@@ -32,7 +32,7 @@ repos:
         args: [ "--pytest-test-first" ]
       - id: trailing-whitespace
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.18
+    rev: v0.21
     hooks:
       - id: validate-pyproject
   - repo: https://github.com/pre-commit/pygrep-hooks
@@ -44,7 +44,7 @@ repos:
       - id: python-no-log-warn
       - id: python-use-type-annotations
   - repo: https://github.com/jackdewinter/pymarkdown
-    rev: v0.9.21
+    rev: v0.9.24
     hooks:
       - id: pymarkdown
         args:
@@ -52,12 +52,12 @@ repos:
           - "MD013, MD041"  # Line length, First line in file should be a top level heading
           - "scan"
   - repo: https://github.com/sphinx-contrib/sphinx-lint
-    rev: v0.9.1
+    rev: v1.0.0
     hooks:
       - id: sphinx-lint
         args: [ "--enable=default-role" ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.5.1
+    rev: v0.7.0
     hooks:
       - id: ruff-format
       - id: ruff
@@ -68,7 +68,7 @@ repos:
   #      - id: pydoclint
   #        args: [ "--quiet" ]
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.10.1
+    rev: v1.12.1
     hooks:
       - id: mypy
         additional_dependencies:  # TODO(Jeffrey): Auto-update this list based on pyproject.toml or requirements-dev.lock
