@@ -17,18 +17,11 @@ jobs:
         uses: eifinger/setup-rye@v3.0.2
       - name: Setup the environment
         run: rye sync --all-features
-      - name: Run ATS
-        uses: codecov/codecov-ats@v0.3.0
-        env:
-          CODECOV_STATIC_TOKEN: ${{ secrets.CODECOV_STATIC_TOKEN }}
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Run tests
-        run: cat codecov_ats/tests_to_run.txt | rye run pytest --cov=./ --cov-branch --cov-report=xml
+        run: rye run pytest --cov=./ --cov-branch --cov-report=xml
       - name: Upload coverage
         uses: codecov/codecov-action@v4.4.1
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          flags: smart-tests
-          plugins: pycoverage,compress-pycoverage
           fail_ci_if_error: true
